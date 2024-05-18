@@ -1,5 +1,4 @@
 FROM alpine:3.19.1
-VOLUME /rocketbank-dev
 RUN apk update
 RUN apk add openjdk21-jre
 EXPOSE 8080
