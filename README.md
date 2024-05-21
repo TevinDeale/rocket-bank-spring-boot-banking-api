@@ -92,7 +92,7 @@ Returns customer object based off UUID in access token.
 
 ---
 
-#### Account Controller
+### Account Controller
 
 ```http
   POST /api/account/add
@@ -127,7 +127,7 @@ Closes account as long as the balance is 0.
 | :-------- | :------- |
 | `account_number` | `number` |
 
-Gets a single account.
+Returns a single account.
 
 ---
 
@@ -135,7 +135,7 @@ Gets a single account.
   GET /api/account/getall
 ```
 
-Gets all accounts that belong to customer.
+Returns all accounts that belong to customer.
 
 ---
 
@@ -166,6 +166,45 @@ Removes money from account balance.
 ---
 
 ### Transaction Controller
+
+```http
+  POST /api/account/transactions?size=12&page=0&sort=desc&sortBy=dateTime
+```
+
+| Parameter | Type     |
+| :-------- | :------- |
+| `account_number` | `number` |
+
+Returns last 12 transactions for account sorted by dateTime and in descending order.
+
+---
+
+```http
+  POST /api/transactions/getall
+```
+
+| Parameter | Type     |
+| :-------- | :------- |
+| `account_number` | `number` |
+| `amount` | `string` |
+
+Returns all transactions for a account.
+
+---
+
+### Ending Daily Balance Controller
+
+```http
+  POST /api/account/history
+```
+
+| Parameter | Type     |
+| :-------- | :------- |
+| `account_number` | `number` |
+
+Returns all ending daily balances for a account.
+
+---
 
 ## Contributing
 
