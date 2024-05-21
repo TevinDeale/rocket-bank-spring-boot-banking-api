@@ -1,7 +1,7 @@
 
 # Rocket Bank Spring Boot API
 
-A banking CRUD API built using the Spring Boot framework and PostgresSQL.
+A banking CRUD API built using the Spring Boot framework and PostgreSQL.
 
 
 ## Tech Stack
