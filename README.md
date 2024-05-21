@@ -13,7 +13,7 @@ A banking CRUD API built using the Spring Boot framework and PostgreSQL.
 - ADD or DELETE account objects to DB
 - Cron job to get ending daily balances for all accounts
 - Tracks DEPOSIT or WITHDRAW transactions
-- API endpoints secured Spring Security
+- API endpoints secured using Spring Security
 
 ## Requirements
 
