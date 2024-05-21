@@ -3,7 +3,6 @@
 
 A banking CRUD API built using the Spring Boot framework and PostgreSQL.
 
-
 ## Tech Stack
 
 ![My Skills](https://skillicons.dev/icons?i=java,spring,docker,maven,postgres)
@@ -15,7 +14,6 @@ A banking CRUD API built using the Spring Boot framework and PostgreSQL.
 - Cron job to get ending daily balances for all accounts
 - Tracks DEPOSIT or WITHDRAW transactions
 - API endpoints secured Spring Security
-
 
 ## Requirements
 
@@ -30,7 +28,7 @@ env.jwks.data = <Cognito jwks.json link>
 env.proxy.address = http://localhost:3000
 env.frontend.address = http://localhost:5173
 ```
-    
+
 ## Deployment
 
 This project can be ran locally or in a Docker container. Clone the repository, create **sensitive.properties** file, and run the following commands.
@@ -40,6 +38,7 @@ This project can be ran locally or in a Docker container. Clone the repository, 
 Checkout this blog article for steps to containerize this API --> [HERE](https://dev.to/tevindeale/containerize-a-java-spring-boot-app-1op3)
 
 #### Locally
+
 Ensure that you have **openJDK 21** installed. **These next steps are done on a MAC device. Windows commands could differ**.
 
 ```bash
@@ -57,14 +56,17 @@ These calls are for testing the API.
 ```http
   GET /home
 ```
+
 Returns a message:  
 Welcome Home!.  
 *This api call is bypassed by the security chain to check if the api is up.
 
 ---
+
 ```http
   GET /hello
 ```
+
 Return a message:  
 Hello, <name>, welcome to your api!  
 Your UUID: <uuid>
@@ -79,8 +81,8 @@ Username: <username>
   POST /api/customer/add
 ```
 
-| Parameter | Type     | 
-| :-------- | :------- | 
+| Parameter | Type     |
+| :-------- | :------- |
 | `username` | `string` |
 | `uuid` | `string` |
 | `fname` | `string` |
@@ -95,6 +97,7 @@ Returns: "User added"
 ```
 
 Returns:
+
 ```json
 {
     username: <username>,
@@ -103,16 +106,13 @@ Returns:
     uuid: <uuid>
 }
 ```
+
 ---
+
 #### Account Controller
-
-
-
 
 ## Contributing
 
 Contributions are always welcome!
 
 If you would like to contribute, reach out via X [@FiinnDev](https://x.com/FiinnDev)
-
-

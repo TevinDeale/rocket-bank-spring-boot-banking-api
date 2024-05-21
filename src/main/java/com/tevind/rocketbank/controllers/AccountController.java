@@ -59,7 +59,7 @@ public class AccountController {
         }
     }
 
-    @DeleteMapping("/api/account/delete/{account_number}")
+    @DeleteMapping("/api/account/delete")
     public ResponseEntity<Account> deleteAccount(@RequestBody Map<String, Object> payload){
         logger.info("Running deleteAccount control");
         String uid = getUUIDFromToken();
