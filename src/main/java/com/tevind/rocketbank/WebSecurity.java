@@ -39,8 +39,9 @@ public class WebSecurity {
     CorsConfigurationSource corsConfigurationSource() {
         String proxy = environment.getProperty("env.proxy.address");
         String front = environment.getProperty("env.frontend.address");
+        String prod_front = environment.getProperty("env.prod.frontend.address");
         CorsConfiguration cors = new CorsConfiguration();
-        cors.setAllowedOrigins(Arrays.asList(proxy, front));
+        cors.setAllowedOrigins(Arrays.asList(proxy, front, prod_front));
         cors.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
         cors.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
