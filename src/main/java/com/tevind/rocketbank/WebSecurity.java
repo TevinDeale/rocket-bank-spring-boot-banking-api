@@ -43,8 +43,9 @@ public class WebSecurity {
         String domain = environment.getProperty("env.domain");
         CorsConfiguration cors = new CorsConfiguration();
         cors.setAllowedOrigins(Arrays.asList(proxy, front, prod_front, domain));
-        cors.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
+        cors.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE","OPTIONS"));
         cors.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));
+        cors.setAllowCredentials(true);
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", cors);
         return source;
