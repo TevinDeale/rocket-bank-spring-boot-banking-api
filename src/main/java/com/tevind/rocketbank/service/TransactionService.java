@@ -23,7 +23,6 @@ public class TransactionService {
     private final TransactionRepository transactions;
     private static final Logger logger = LoggerFactory.getLogger(TransactionService.class);
 
-    @Autowired
     public TransactionService(TransactionRepository transactions){
         this.transactions = transactions;
     }

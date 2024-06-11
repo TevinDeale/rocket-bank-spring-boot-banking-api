@@ -21,7 +21,6 @@ public class AccountService {
     private final AccountRepository accounts;
     private static final Logger logger = LoggerFactory.getLogger(AccountService.class);
 
-    @Autowired
     public AccountService(AccountRepository accounts){
         this.accounts = accounts;
     }
